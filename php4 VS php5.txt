@@ -1,0 +1,8 @@
+http://engineering.oregonstate.edu/computing/web/216
+
+
+
+http://siliconstation.com/how-fix-php-notice-undefined-index/
+
+
+http://www.phpeasystep.com/phptu/4.html --- alternate row color

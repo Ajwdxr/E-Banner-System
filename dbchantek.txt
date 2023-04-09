@@ -1,0 +1,177 @@
+===Database dbchantek
+
+== Table structure for table booking
+
+|------
+|Column|Type|Null|Default
+|------
+|//**order_id**//|int(100)|No|
+|username|varchar(20)|No|
+|product_id|int(100)|No|
+|order_date|date|No|
+|order_pickup_date|date|No|
+|quantity|int(11)|No|
+|status|varchar(50)|No|
+== Dumping data for table booking
+
+|1|fitry|1|2018-04-09|2018-04-15|2|Process
+|2|tina|3|2018-04-07|2018-04-19|2|Process
+|5|tina|4|2018-04-08|2018-04-24|1|Process
+== Table structure for table booking
+
+|------
+|Column|Type|Null|Default
+|------
+|//**order_id**//|int(100)|No|
+|username|varchar(20)|No|
+|product_id|int(100)|No|
+|order_date|date|No|
+|order_pickup_date|date|No|
+|quantity|int(11)|No|
+|status|varchar(50)|No|
+== Table structure for table class
+
+|------
+|Column|Type|Null|Default
+|------
+|//**class_id**//|int(100)|No|
+|class_no|varchar(10)|No|
+|class_name|varchar(100)|No|
+|class_description|varchar(250)|No|
+|class_date|date|No|
+|class_time|time|No|
+|class_price|decimal(10,2)|No|
+== Dumping data for table class
+
+|1|CBC0100|Old Time Favourite Baking Workshop|Strawberry Cake, Nutty Nutella Cake, Chocolate Orange Cake|2018-04-07|09:00:00|300.00
+|2|CBC0101|Slice Cakes Baking Workshop|Manggo Milkshake Cake, Milky Passionfruit Cake, Milo Tabur Cake, Coconut Chocolait Cake|0000-00-00|00:00:00|250.00
+|3|CBB0100|Teatime Treats Baking Workshop|Frambozen Kenari, Nutella Cheese Tart, Double 
+Trouble Choc Cookies, Nutella Gunung Berapi, 
+Berries Tart		 		 |2018-04-24|14:00:00|290.00
+|4|CBB0101|Cup Cakes Baking Workshop|Apam Balik CUpcakes, Sirap Bandung Cupcakes, Pandan Kaya Cupcakes|0000-00-00|00:00:00|300.00
+|5|CBC0102|Modern Crunch Baking Workshop|Suji Oreo, Ombak Rindu, Cornflake Crunchy, Milky Chocolate Oat, Red Velvet Cookies, Butter Cookies|0000-00-00|02:00:00|330.00
+|6|CBB0103|Old School Biskut Raya Workshop|		 Tart, SAmprit, Biskut Kelapa, 
+Biskut Kacang, Dahlia, Makmur		 |0000-00-00|09:30:00|330.00
+|7|CBC0103|Classic Cake Baking Workshop|Victoria Sandwish Cake, Pandan Nisang Cake, Tokma Carrot Cake, Humming Bird Cake|2018-04-28|09:30:00|330.00
+== Table structure for table class
+
+|------
+|Column|Type|Null|Default
+|------
+|//**class_id**//|int(100)|No|
+|class_no|varchar(10)|No|
+|class_name|varchar(100)|No|
+|class_description|varchar(250)|No|
+|class_date|date|No|
+|class_time|time|No|
+|class_price|decimal(10,2)|No|
+== Table structure for table level
+
+|------
+|Column|Type|Null|Default
+|------
+|//**level_id**//|int(10)|No|
+|level_description|varchar(50)|No|
+== Dumping data for table level
+
+|1|Admin
+|2|Staff
+|3|User
+== Table structure for table level
+
+|------
+|Column|Type|Null|Default
+|------
+|//**level_id**//|int(10)|No|
+|level_description|varchar(50)|No|
+== Table structure for table product
+
+|------
+|Column|Type|Null|Default
+|------
+|//**product_id**//|int(100)|No|
+|product_name|varchar(20)|No|
+|product_description|varchar(150)|No|
+|product_status|varchar(20)|No|
+|product_category|varchar(50)|No|
+|product_no|varchar(10)|No|
+|product_price|decimal(10,2)|No|
+== Dumping data for table product
+
+|1|Victoria Sandwich|Buttery, tender spongecake with a dollop of sweetened whipped cream, layered with fresh strawberry jem|Available|Whole Cake|CF0125|120.00
+|3|Butter Cookies|crispy buttery cookies |Not Avaiable|Cookies|CB9876|5.00
+|4|Carrot Cake|Moist and flavourful with grated carrots and topped with a delicious cream cheese icing|Available|Whole Cake|CF0124|120.00
+|5|Pandan Kaya Cheese|Fluffy sponge cake fill with smooth flavorful pandan kaya cheese |Available|Whole Cake|CP0128|130.00
+== Table structure for table product
+
+|------
+|Column|Type|Null|Default
+|------
+|//**product_id**//|int(100)|No|
+|product_name|varchar(20)|No|
+|product_description|varchar(150)|No|
+|product_status|varchar(20)|No|
+|product_category|varchar(50)|No|
+|product_no|varchar(10)|No|
+|product_price|decimal(10,2)|No|
+== Table structure for table registration
+
+|------
+|Column|Type|Null|Default
+|------
+|//**register_id**//|int(11)|No|
+|class_id|int(100)|No|
+|username|varchar(20)|No|
+|register_date|date|No|
+|deposit|decimal(10,2)|No|
+|register_status|varchar(50)|No|
+== Dumping data for table registration
+
+|1|1|nadrah|2018-03-21|300.00|Complete
+|24|7|tina|2018-04-08|100.00|In Process
+== Table structure for table registration
+
+|------
+|Column|Type|Null|Default
+|------
+|//**register_id**//|int(11)|No|
+|class_id|int(100)|No|
+|username|varchar(20)|No|
+|register_date|date|No|
+|deposit|decimal(10,2)|No|
+|register_status|varchar(50)|No|
+== Table structure for table user
+
+|------
+|Column|Type|Null|Default
+|------
+|//**username**//|varchar(20)|No|
+|password|varchar(10)|No|
+|name|varchar(50)|No|
+|gender|int(2)|No|
+|address|varchar(100)|No|
+|telephone|varchar(10)|No|
+|level_id|int(10)|No|
+|picture|varchar(100)|No|
+== Dumping data for table user
+
+|aafiyah|aafiyah|SITI AAFIYAH|2|NO1, JALAN BUJANG 12, TAMAN LEMBAH BUJANG,  08400 MERBOK, SUNGAI PETANI, KEDAH|012-123456|1|Desert.jpg
+|ahmad|ahmad|AHMAD FATIH|1|NO 7, KAMPUNG PENANG, PULAU PINANG|017-354126|2|algorithm.jpg
+|fitry|fitry|FITRY HAMID|3|NO 9, TAMAN HARUM, PERLIS|0178989895|3|Tulips.jpg
+|nadrah|nadrah|Nadrah Nazri|2|NO23, JALAN SELASIH 3,
+TAMAN BUNGA,
+81131 JOHOR BAHRU, JOHOR|0127897892|3|Chrysanthemum.jpg
+|tina|tina|Tina Sofea|2|12 Jalan Bahagia, Taman Sejahtera, Sungai Petani, Kedah|0123456788|3|1-nUZTZdDBKuci35Ss42bhbQ.jpeg
+== Table structure for table user
+
+|------
+|Column|Type|Null|Default
+|------
+|//**username**//|varchar(20)|No|
+|password|varchar(10)|No|
+|name|varchar(50)|No|
+|gender|int(2)|No|
+|address|varchar(100)|No|
+|telephone|varchar(10)|No|
+|level_id|int(10)|No|
+|picture|varchar(100)|No|

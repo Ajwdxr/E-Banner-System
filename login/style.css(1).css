@@ -1,0 +1,125 @@
+$radii: 5px;
+body{
+  position:relative;
+  height:100vh;
+  width:100vw;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+.screens{
+  position:relative;
+}
+//Reset input
+input, button, fieldset{
+  -webkit-appearance: none;
+   -moz-appearance:   none;
+   appearance:        none;
+  background:none;
+  border: none;
+  outline:none;
+}
+.welcomeScreen{
+  position:absolute;
+  display:block;
+  width:100%;
+  height:100%;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+	-webkit-animation: fadeOut 10s , Gradient 15s ease infinite; 
+	-moz-animation:fadeOut 5s, Gradient 15s ease infinite;
+	animation:fadeOut 5s, Gradient 15s ease infinite;
+  animation-delay: 3s;
+  color:white; 
+  z-index:1;
+  h1{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+}
+.login{
+  display:block;
+}
+.register{
+  display:none;
+}
+.login, .register{
+  position:absolute;
+  top:50%;
+  left:50%;
+  // width:25vw;
+  text-align:center;
+  color:white;
+  text-anchor: middle;
+  transform:translate(-50%,-50%);
+  transition: all 5s;
+  legend{
+    font-weight:bold;
+    padding:0 20px;
+  }
+  input{
+    margin:0 auto;
+    margin-bottom:30px;
+    margin-top:30px;
+    padding: 15px;
+    display:block;
+    border-radius:$radii;
+    border: 2px solid white;
+    color:white;
+    &::placeholder{
+      color:rgba(255,255,255,0.75);
+      font-weight:bold;
+    }
+    &:focus{
+      outline:none;
+      border: 2px solid rgba(255,255,255,0.25);
+    }
+  }
+  button{
+    background:white;
+    padding:15px;
+    border-radius:$radii;
+    font-weight:bold;
+    color:grey;
+    cursor:pointer;
+    transition:all 1s;
+    box-shadow:2px 2px 3px rgba(0,0,0,0.25);
+    &:hover{
+      transition: all 1s ease-in-out;
+      color:black;
+      box-shadow:0px 0px 0px none;
+      background:none;
+      color:white;
+      border: 3px solid white; 
+    }
+  }
+	fieldset{
+		border-radius: $radii;
+		border: 2px solid white;
+		}
+	}
+//Animations
+	@keyframes Gradient {
+		0% {
+			background-position: 0% 50%
+		}
+		50% {
+			background-position: 100% 50%
+	}
+		100% {
+			background-position: 0% 50%
+		}
+	}
+	@keyframes fadeOut {
+	from {opacity:1;}
+	to {opacity:0;}
+	}
+	
+	@keyframes buttonFade{
+	from{opacity:1;}
+	to {opacity:0.25}
+}
